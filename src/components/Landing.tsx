@@ -309,7 +309,7 @@ const Landing = () => {
             <TableContainer>
               <TextHeader style={{ color: "#FFA500" }}>Whiskey</TextHeader>
               <Table>
-                <thead style={{ borderBottom: "0.1px solid gray" }}>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
                   <tr>
                     <TH>Product</TH>
                     <TH>Price (Ksh)</TH>
@@ -320,7 +320,7 @@ const Landing = () => {
                   {whiskey.map((product, index) => (
                     <TableRow
                       key={index}
-                      style={{ borderBottom: "0.1px solid gray" }}
+                      style={{ borderBottom: "0.1px dashed gray" }}
                     >
                       <TableCell align="left">{product.name}</TableCell>
                       <TableCell align="center">{product.ksh}</TableCell>
@@ -345,7 +345,7 @@ const Landing = () => {
               <TextHeader style={{ color: "#FFA500" }}>Beers</TextHeader>
 
               <Table>
-                <thead style={{ borderBottom: "0.1px solid gray" }}>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
                   <tr>
                     <TH>Product</TH>
                     <TH>Price (Ksh)</TH>
@@ -356,7 +356,7 @@ const Landing = () => {
                   {Beer.map((product, index) => (
                     <TableRow
                       key={index}
-                      style={{ borderBottom: "0.1px solid gray" }}
+                      style={{ borderBottom: "0.1px dashed gray" }}
                     >
                       <TableCell align="left">{product.name}</TableCell>
                       <TableCell align="center">{product.ksh}</TableCell>
@@ -374,7 +374,7 @@ const Landing = () => {
               <TextHeader style={{ color: "#FFA500" }}>Soft-Drinks</TextHeader>
 
               <Table>
-                <thead style={{ borderBottom: "0.1px solid gray" }}>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
                   <tr>
                     <TH>Product</TH>
                     <TH>Price (Ksh)</TH>
@@ -385,7 +385,7 @@ const Landing = () => {
                   {Soft_Drinks.map((product, index) => (
                     <TableRow
                       key={index}
-                      style={{ borderBottom: "0.1px solid gray" }}
+                      style={{ borderBottom: "0.1px dashed gray" }}
                     >
                       <TableCell align="left">{product.name}</TableCell>
                       <TableCell align="center">{product.ksh}</TableCell>
@@ -409,7 +409,7 @@ const Landing = () => {
               <TextHeader style={{ color: "#FFA500" }}>Vapes</TextHeader>
 
               <Table>
-                <thead style={{ borderBottom: "0.1px solid gray" }}>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
                   <tr>
                     <TH>Product</TH>
                     <TH>Price (Ksh)</TH>
@@ -420,7 +420,7 @@ const Landing = () => {
                   {Vapes.map((product, index) => (
                     <TableRow
                       key={index}
-                      style={{ borderBottom: "0.1px solid gray" }}
+                      style={{ borderBottom: "0.1px dashed gray" }}
                     >
                       <TableCell align="left">{product.name}</TableCell>
                       <TableCell align="center">{product.ksh}</TableCell>

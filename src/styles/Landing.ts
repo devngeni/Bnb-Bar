@@ -24,7 +24,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  padding: 30px;
+  margin: 5% 0;
   @media screen and (max-width: 1700px) {
     width: 90%;
   }
@@ -81,7 +81,7 @@ export const ImageContainer = styled.div<ImageContainerProps>`
 `;
 
 export const TableContainer = styled.div`
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 `;
 export const Table = styled.table`
