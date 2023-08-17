@@ -332,13 +332,13 @@ const Landing = () => {
             </TableContainer>
           </Card>
           <Card>
-            <ImageContainer imageUrl="/whiskey.png" />
+            <ImageContainer imageUrl="whiskey.png" />
           </Card>
         </Container1>
 
         <Container>
           <Card>
-            <ImageContainer imageUrl="/beers.png" />
+            <ImageContainer imageUrl="beers.png" />
           </Card>
           <Card>
             <TableContainer>
@@ -397,12 +397,12 @@ const Landing = () => {
             </TableContainer>
           </Card>
           <Card>
-            <ImageContainer imageUrl="/sweetdrinks.png" />
+            <ImageContainer imageUrl="sweetdrinks.png" />
           </Card>
         </Container1>
         <Container>
           <Card>
-            <ImageContainer imageUrl="/vapes.png" />
+            <ImageContainer imageUrl="vapes.png" />
           </Card>
           <Card>
             <TableContainer>
