@@ -1,3 +1,4 @@
+import Comm from "@/components/Comm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
@@ -20,6 +21,7 @@ export default function Layout({ children }: LayoutProps) {
       </nav>
       <main>{children}</main>
       <footer>
+        <Comm />
         <Footer />
       </footer>
     </>
