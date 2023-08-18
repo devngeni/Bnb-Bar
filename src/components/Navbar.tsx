@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <BodyContainer>
       <NavbarContainer>
-        <h1>BNB BAR</h1>
+        <h1 style={{ color: "#FFA500" }}>BNB BAR</h1>
         <h3 style={{ fontWeight: "bold" }}>Drinks & Smokes</h3>
         <h3>24hr Service</h3>
         <h3>Call/Whatsapp</h3>

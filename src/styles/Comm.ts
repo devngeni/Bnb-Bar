@@ -7,14 +7,13 @@ export const CommContainer = styled.div`
   transition: transform 0.9s ease;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
   @media screen and (max-width: 768px) {
-    bottom: 11%;
+    bottom: 17%;
     right: 6%;
   }
 `;
-
 
 export const CommWrapper = styled.div`
   display: inline-block;
@@ -29,7 +28,7 @@ export const HoverText = styled.span`
   position: absolute;
   bottom: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-15deg);
   background-color: black;
   color: white;
   padding: 4px 8px;

@@ -1,11 +1,11 @@
 import { CommContainer, CommWrapper, HoverText } from "@/styles/Comm";
 import Link from "next/link";
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
 import { styled } from "styled-components";
+import { SocialIcon } from "react-social-icons";
 
-const StyledWhatsappIcon = styled(FaWhatsapp)`
-  color: green;
+const StyledWhatsappIcon = styled(SocialIcon)`
+  color: lightGreen;
 `;
 
 const Comm = () => {
@@ -17,8 +17,11 @@ const Comm = () => {
         rel="noopener noreferrer"
       >
         <CommWrapper>
-          <StyledWhatsappIcon size={60} />
-          <HoverText className="hover-text">We are available</HoverText>
+          <StyledWhatsappIcon
+            network="whatsapp"
+            style={{ height: 60, width: 60 }}
+          />
+          <HoverText className="hover-text">Order Now</HoverText>
         </CommWrapper>
       </Link>
     </CommContainer>

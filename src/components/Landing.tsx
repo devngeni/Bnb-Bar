@@ -14,7 +14,6 @@ import {
 } from "@/styles/Landing";
 // import React, { useEffect, useState } from "react";
 
-
 const itemData = {
   whiskey: [
     {
@@ -345,7 +344,10 @@ const Landing = () => {
             </TableContainer>
           </Card>
           <Card>
-            <ImageContainer imageUrl="whiskey.png" />
+            <ImageContainer
+              imageUrl="whiskey.png"
+              style={{ backgroundSize: "contain" }}
+            />
           </Card>
         </Container1>
         <Container>
@@ -413,7 +415,7 @@ const Landing = () => {
         </Container1>
         <Container>
           <Card>
-            <ImageContainer imageUrl="beers.png" />
+            <ImageContainer imageUrl="liqour.png" />
           </Card>
           <Card>
             <TableContainer>
@@ -471,12 +473,12 @@ const Landing = () => {
             </TableContainer>
           </Card>
           <Card>
-            <ImageContainer imageUrl="whiskey.png" />
+            <ImageContainer imageUrl="cognac.png" />
           </Card>
         </Container1>
         <Container>
           <Card>
-            <ImageContainer imageUrl="beers.png" />
+            <ImageContainer imageUrl="rum.png" />
           </Card>
           <Card>
             <TableContainer>
@@ -509,9 +511,6 @@ const Landing = () => {
 
         <Container1>
           <Card>
-            <ImageContainer imageUrl="beers.png" />
-          </Card>
-          <Card>
             <TableContainer>
               <TextHeader style={{ color: "#FFA500" }}>Beers</TextHeader>
 
@@ -538,8 +537,17 @@ const Landing = () => {
               </Table>
             </TableContainer>
           </Card>
+          <Card>
+            <ImageContainer imageUrl="beers.png" />
+          </Card>
         </Container1>
-        <Container1>
+        <Container>
+          <Card>
+            <ImageContainer
+              imageUrl="sweetdrinks.png"
+              style={{ height: "600px" }}
+            />
+          </Card>
           <Card>
             <TableContainer>
               <TextHeader style={{ color: "#FFA500" }}>Soft-Drinks</TextHeader>
@@ -567,14 +575,8 @@ const Landing = () => {
               </Table>
             </TableContainer>
           </Card>
-          <Card>
-            <ImageContainer imageUrl="sweetdrinks.png" />
-          </Card>
-        </Container1>
-        <Container>
-          <Card>
-            <ImageContainer imageUrl="vapes.png" />
-          </Card>
+        </Container>
+        <Container1>
           <Card>
             <TableContainer>
               <TextHeader style={{ color: "#FFA500" }}>Vapes</TextHeader>
@@ -602,7 +604,10 @@ const Landing = () => {
               </Table>
             </TableContainer>
           </Card>
-        </Container>
+          <Card>
+            <ImageContainer imageUrl="vapes.png" />
+          </Card>
+        </Container1>
       </BodyWrapper>
     </BodyContainer>
   );

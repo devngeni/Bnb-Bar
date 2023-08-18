@@ -16,9 +16,12 @@ export const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 export const Container = styled.div`
   position: relative;
+  // background-color: rgba(0, 0, 0, 0.7);
+  // backdrop-filter: blur(10px);
   width: 80%;
   height: auto;
   display: flex;
@@ -76,6 +79,7 @@ export const ImageContainer = styled.div<ImageContainerProps>`
     height: 350px;
   }
   @media screen and (max-width: 768px) {
+    background-size: 100%;
     width: 300px;
     height: 300px;
   }

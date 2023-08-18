@@ -19,7 +19,9 @@ export default function Layout({ children }: LayoutProps) {
       <nav>
         <Navbar />
       </nav>
-      <main>{children}</main>
+     
+        <main>{children}</main>
+    
       <footer>
         <Comm />
         <Footer />
