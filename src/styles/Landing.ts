@@ -9,6 +9,7 @@ export const BodyContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Bellefair;
 `;
 export const BodyWrapper = styled.div`
   width: 100%;
@@ -32,6 +33,10 @@ export const Container = styled.div`
     width: 100%;
     flex-direction: column;
   }
+  @media screen and (max-width: 600px) {
+    width: 80%;
+    flex-direction: column;
+  }
 `;
 
 export const Container1 = styled(Container)`
@@ -51,7 +56,7 @@ export const Card = styled.div`
 `;
 export const ImageContainer = styled.div<ImageContainerProps>`
   width: 600px;
-  height: 600px;
+  height: 300px;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -91,8 +96,11 @@ export const Table = styled.table`
 `;
 export const TH = styled.th`
   padding: 20px 100px;
+  font-size: 22px;
+
   @media screen and (max-width: 768px) {
     padding: 20px 30px;
+    font-size: 18px;
   }
   @media screen and (max-width: 300px) {
     padding: 10px 20px;
@@ -103,9 +111,14 @@ export const TableRow = styled.tr`
   }
 `;
 export const TableCell = styled.td`
+  font-size: 22px;
   padding: 10px;
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const TextHeader = styled.h1`
   font-color: "#ffa500";
+  padding: 10px;
 `;

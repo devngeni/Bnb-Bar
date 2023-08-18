@@ -12,19 +12,20 @@ import {
   TableRow,
   TextHeader
 } from "@/styles/Landing";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+
 
 const itemData = {
   whiskey: [
     {
+      name: "Johny Walker Double black 1Ltr",
+      ksh: "11,000.00",
+      usd: "$78.57"
+    },
+    {
       name: "Johny Walker Black Label 1Ltr",
       ksh: "6,500.00",
       usd: "$46.43"
-    },
-    {
-      name: "Johny Walker Double Black 1Ltr",
-      ksh: "11,000.00",
-      usd: "$78.57"
     },
     {
       name: "Jack Daniels 1ltr",
@@ -35,14 +36,16 @@ const itemData = {
       name: "Monkey Shoulder 1ltr",
       ksh: "8,000.00",
       usd: "$57.14"
-    },
+    }
+  ],
+  Vodka: [
     {
       name: "Ciroc 1ltr",
       ksh: "8,500.00",
       usd: "$60.71"
     },
     {
-      name: "Smirnoff Vodka1ltr",
+      name: "Smirnoff Vodka 1ltr",
       ksh: "4,000.00",
       usd: "$28.57"
     },
@@ -55,7 +58,9 @@ const itemData = {
       name: "Absolute Vodka 1ltr",
       ksh: "4,000.00",
       usd: "$28.57"
-    },
+    }
+  ],
+  Gin: [
     {
       name: "Bombay 750ml",
       ksh: "4,500.00",
@@ -80,7 +85,9 @@ const itemData = {
       name: "Hendrix 700ml",
       ksh: "7,000.00",
       usd: "$50.00"
-    },
+    }
+  ],
+  Liquor: [
     {
       name: "Bailey's Original 1ltr",
       ksh: "5,000.00",
@@ -90,6 +97,11 @@ const itemData = {
       name: "Amarula 1ltr",
       ksh: "4,000.00",
       usd: "$28.57"
+    },
+    {
+      name: "Jagermeister 1ltr",
+      ksh: "5,000.00",
+      usd: "$35.71"
     },
     {
       name: "Don Julio Blanco 750ml",
@@ -110,7 +122,9 @@ const itemData = {
       name: "Camino Clear 750ml",
       ksh: "3,500.00",
       usd: "$25.00"
-    },
+    }
+  ],
+  Cognac: [
     {
       name: "Hennesey VS 750ml",
       ksh: "8,500.00",
@@ -125,18 +139,10 @@ const itemData = {
       name: "Hennesey VSOP 750ml",
       ksh: "15,000.00",
       usd: "$107.14"
-    },
-    {
-      name: "Jagermiser 1ltr",
-      ksh: "5,000.00",
-      usd: "$35.71"
-    },
-    {
-      name: "Bacardi Gold 1ltr",
-      ksh: "4,000.00",
-      usd: "$28.57"
     }
   ],
+  Rum: [{ name: "Bacardi Gold 1ltr", ksh: "4,000.00", usd: "$28.57" }],
+
   Beer: [
     {
       name: "Tusker Can 500ml",
@@ -154,7 +160,7 @@ const itemData = {
       usd: "$2.86"
     },
     {
-      name: "Guiness Can",
+      name: "Guinness Can",
       ksh: "400.00",
       usd: "$2.86"
     },
@@ -296,11 +302,18 @@ const itemData = {
       usd: "$2.14"
     }
   ],
-  Vapes: [{ name: "Vapes", ksh: "1,500.00", usd: "$10.71" }]
+  Vapes: [
+    {
+      name: "5000 Puffs Rechargeable",
+      ksh: "2,000.00",
+      usd: "$14.29"
+    }
+  ]
 };
 
 const Landing = () => {
-  const { whiskey, Beer, Soft_Drinks, Vapes } = itemData;
+  const { whiskey, Vodka, Gin, Liquor, Cognac, Rum, Beer, Soft_Drinks, Vapes } =
+    itemData;
   return (
     <BodyContainer>
       <BodyWrapper>
@@ -335,8 +348,166 @@ const Landing = () => {
             <ImageContainer imageUrl="whiskey.png" />
           </Card>
         </Container1>
-
         <Container>
+          <Card>
+            <ImageContainer imageUrl="vodka.png" />
+          </Card>
+          <Card>
+            <TableContainer>
+              <TextHeader style={{ color: "#FFA500" }}>Vodka</TextHeader>
+
+              <Table>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
+                  <tr>
+                    <TH>Product</TH>
+                    <TH>Price (Ksh)</TH>
+                    <TH>Price (USD)</TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Vodka.map((product, index) => (
+                    <TableRow
+                      key={index}
+                      style={{ borderBottom: "0.1px dashed gray" }}
+                    >
+                      <TableCell align="left">{product.name}</TableCell>
+                      <TableCell align="center">{product.ksh}</TableCell>
+                      <TableCell align="center">{product.usd}</TableCell>
+                    </TableRow>
+                  ))}
+                </tbody>
+              </Table>
+            </TableContainer>
+          </Card>
+        </Container>
+        <Container1>
+          <Card>
+            <TableContainer>
+              <TextHeader style={{ color: "#FFA500" }}>Gin</TextHeader>
+              <Table>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
+                  <tr>
+                    <TH>Product</TH>
+                    <TH>Price (Ksh)</TH>
+                    <TH>Price (USD)</TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Gin.map((product, index) => (
+                    <TableRow
+                      key={index}
+                      style={{ borderBottom: "0.1px dashed gray" }}
+                    >
+                      <TableCell align="left">{product.name}</TableCell>
+                      <TableCell align="center">{product.ksh}</TableCell>
+                      <TableCell align="center">{product.usd}</TableCell>
+                    </TableRow>
+                  ))}
+                </tbody>
+              </Table>
+            </TableContainer>
+          </Card>
+          <Card>
+            <ImageContainer imageUrl="gin.png" />
+          </Card>
+        </Container1>
+        <Container>
+          <Card>
+            <ImageContainer imageUrl="beers.png" />
+          </Card>
+          <Card>
+            <TableContainer>
+              <TextHeader style={{ color: "#FFA500" }}>Liquor</TextHeader>
+
+              <Table>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
+                  <tr>
+                    <TH>Product</TH>
+                    <TH>Price (Ksh)</TH>
+                    <TH>Price (USD)</TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Liquor.map((product, index) => (
+                    <TableRow
+                      key={index}
+                      style={{ borderBottom: "0.1px dashed gray" }}
+                    >
+                      <TableCell align="left">{product.name}</TableCell>
+                      <TableCell align="center">{product.ksh}</TableCell>
+                      <TableCell align="center">{product.usd}</TableCell>
+                    </TableRow>
+                  ))}
+                </tbody>
+              </Table>
+            </TableContainer>
+          </Card>
+        </Container>
+        <Container1>
+          <Card>
+            <TableContainer>
+              <TextHeader style={{ color: "#FFA500" }}>Cognac</TextHeader>
+              <Table>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
+                  <tr>
+                    <TH>Product</TH>
+                    <TH>Price (Ksh)</TH>
+                    <TH>Price (USD)</TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Cognac.map((product, index) => (
+                    <TableRow
+                      key={index}
+                      style={{ borderBottom: "0.1px dashed gray" }}
+                    >
+                      <TableCell align="left">{product.name}</TableCell>
+                      <TableCell align="center">{product.ksh}</TableCell>
+                      <TableCell align="center">{product.usd}</TableCell>
+                    </TableRow>
+                  ))}
+                </tbody>
+              </Table>
+            </TableContainer>
+          </Card>
+          <Card>
+            <ImageContainer imageUrl="whiskey.png" />
+          </Card>
+        </Container1>
+        <Container>
+          <Card>
+            <ImageContainer imageUrl="beers.png" />
+          </Card>
+          <Card>
+            <TableContainer>
+              <TextHeader style={{ color: "#FFA500" }}>Rum</TextHeader>
+
+              <Table>
+                <thead style={{ borderBottom: "0.1px dashed gray" }}>
+                  <tr>
+                    <TH>Product</TH>
+                    <TH>Price (Ksh)</TH>
+                    <TH>Price (USD)</TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Liquor.map((product, index) => (
+                    <TableRow
+                      key={index}
+                      style={{ borderBottom: "0.1px dashed gray" }}
+                    >
+                      <TableCell align="left">{product.name}</TableCell>
+                      <TableCell align="center">{product.ksh}</TableCell>
+                      <TableCell align="center">{product.usd}</TableCell>
+                    </TableRow>
+                  ))}
+                </tbody>
+              </Table>
+            </TableContainer>
+          </Card>
+        </Container>
+
+        <Container1>
           <Card>
             <ImageContainer imageUrl="beers.png" />
           </Card>
@@ -367,7 +538,7 @@ const Landing = () => {
               </Table>
             </TableContainer>
           </Card>
-        </Container>
+        </Container1>
         <Container1>
           <Card>
             <TableContainer>

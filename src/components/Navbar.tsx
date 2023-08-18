@@ -7,6 +7,8 @@ const Navbar = () => {
     <BodyContainer>
       <NavbarContainer>
         <h1>BNB BAR</h1>
+        <h3 style={{ fontWeight: "bold" }}>Drinks & Smokes</h3>
+        <h3>24hr Service</h3>
         <h3>Call/Whatsapp</h3>
         <h3>+254794701568</h3>
       </NavbarContainer>

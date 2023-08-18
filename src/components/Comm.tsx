@@ -1,21 +1,13 @@
-import { CommContainer } from "@/styles/Comm";
+import { CommContainer, CommWrapper, HoverText } from "@/styles/Comm";
 import Link from "next/link";
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { styled } from "styled-components";
 
-const IconLink = (props: any) => {
-  const { url, IconComponent } = props;
+const StyledWhatsappIcon = styled(FaWhatsapp)`
+  color: green;
+`;
 
-  const handleLinkClick = (url: any) => {
-    window.open(url, "_blank");
-  };
-
-  return (
-    <div onClick={() => handleLinkClick(url)}>
-      <IconComponent />
-    </div>
-  );
-};
 const Comm = () => {
   return (
     <CommContainer>
@@ -24,7 +16,10 @@ const Comm = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaWhatsapp size={60} color="green" />
+        <CommWrapper>
+          <StyledWhatsappIcon size={60} />
+          <HoverText className="hover-text">We are available</HoverText>
+        </CommWrapper>
       </Link>
     </CommContainer>
   );
