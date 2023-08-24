@@ -20,8 +20,6 @@ export const BodyWrapper = styled.div`
 `;
 export const Container = styled.div`
   position: relative;
-  // background-color: rgba(0, 0, 0, 0.7);
-  // backdrop-filter: blur(10px);
   width: 80%;
   height: auto;
   display: flex;
@@ -123,6 +121,7 @@ export const TableCell = styled.td`
 `;
 
 export const TextHeader = styled.h1`
-  font-color: "#ffa500";
+  color: #ffa500;
+  font-weight: bold;
   padding: 10px;
 `;
