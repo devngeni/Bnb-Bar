@@ -1,11 +1,14 @@
 import React from "react";
-import { FooterContainer } from "@/styles/Footer";
+import { Copyright, FooterContainer, FooterText } from "@/styles/Footer";
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <h2 style={{ fontWeight: "bold" }}>24hr Delivery Service</h2>
-      <p> Copyright @{new Date().getFullYear()} Trusted Homes</p>
+      <FooterText>24hr Delivery Service</FooterText>
+      <Copyright>
+        {" "}
+        Copyright @{new Date().getFullYear()} Trusted Homes
+      </Copyright>
     </FooterContainer>
   );
 };

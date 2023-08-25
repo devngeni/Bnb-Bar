@@ -16,3 +16,6 @@ export const NavbarContainer = styled.div`
     }
   }
 `;
+export const HeaderText = styled.h3`
+  font-weight: bold;
+`;

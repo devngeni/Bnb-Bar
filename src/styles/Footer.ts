@@ -10,3 +10,9 @@ export const FooterContainer = styled.div`
   justify-content: center;
   font-family: Bellefair;
 `;
+export const FooterText = styled.h2`
+  font-weight: bold;
+`;
+export const Copyright = styled.p`
+  font-weight: normal;
+`;

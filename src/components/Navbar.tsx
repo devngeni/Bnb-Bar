@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { BodyContainer } from "@/styles/Landing";
-import { NavbarContainer } from "@/styles/Navbar";
+import { BodyContainer, TextHeader } from "@/styles/Landing";
+import { HeaderText, NavbarContainer } from "@/styles/Navbar";
 
 const Navbar = () => {
   return (
     <BodyContainer>
       <NavbarContainer>
-        <h1 style={{ color: "#FFA500" }}>BNB BAR</h1>
-        <h3 style={{ fontWeight: "bold" }}>Drinks & Smokes</h3>
-        <h3>24hr Service</h3>
-        <h3>Call/Whatsapp</h3>
-        <h3>+254794701568</h3>
+        <TextHeader>BNB BAR</TextHeader>
+        <HeaderText>Drinks & Smokes</HeaderText>
+        <HeaderText>24hr Service</HeaderText>
+        <HeaderText>Call/Whatsapp</HeaderText>
+        <HeaderText>+254794701568</HeaderText>
       </NavbarContainer>
     </BodyContainer>
   );
